@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ADJ Restaurant - Experience Fine Dining</title>
+<link rel="stylesheet" href="styles.css" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* Added style for 'Added' state */
+  .add-btn.added {
+    background-color: #2ecc71 !important; /* green */
+    color: #fff !important;
+    cursor: default !important;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ADJ Restaurant</div>
+  <ul id="navbar">
+    <li><a href="#home" class="smooth-scroll">Home</a></li>
+    <li><a href="#menu" class="smooth-scroll">Menu</a></li>
+    <li><a href="#about" class="smooth-scroll">About</a></li>
+    <li><a href="#order" class="smooth-scroll">Order</a></li>
+    <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">&#9776;</div>
+</nav>
+
+<header id="home">
+  <div class="hero-content">
+    <h1 class="glow">Welcome to ADJ Restaurant</h1>
+    <p>Fine Food, Fine Mood — Delight your palate with our passion.</p>
+    <button class="btn fancy-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'});">Book a Table</button>
+  </div>
+</header>
+
+<section id="menu">
+  <div class="heading"><h3>Our Menu</h3></div>
+  <div class="cards-wrapper">
+    <div class="card animated-card">
+      <img src="MasalaDosa.jpg" alt="Masala Dosa" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Masala Dosa</h5><span class="price">₹70</span>
+        </div>
+        <p>Crispy rice pancake filled with spiced potato masala, served with sambar and coconut chutney.</p>
+        <button class="btn-card fancy-btn add-btn" type="button">Add to Order</button>
+      </div>
+    </div>
+    <div class="card animated-card">
+      <img src="idli.jpg" alt="Idli with Sambar" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Idli with Sambar</h5><span class="price">₹60</span>
+        </div>
+        <p>Steamed rice cakes served with hot lentil soup (sambar) and coconut chutney.</p>
+        <button class="btn-card fancy-btn add-btn" type="button">Add to Order</button>
+      </div>
+    </div>
+    <div class="card animated-card">
+      <img src="meduvada.webp" alt="Medu Vada" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Medu Vada</h5><span class="price">₹20</span>
+        </div>
+        <p>Deep-fried lentil doughnuts, crispy outside and soft inside, served with sambar and chutney.</p>
+        <button class="btn-card fancy-btn add-btn" type="button">Add to Order</button>
+      </div>
+    </div>
+    <div class="card animated-card">
+      <img src="Uttapam.webp" alt="Uttapam" />
+      <div class="details">
+        <div class="details-sub">
+          <h5>Uttapam</h5><span class="price">₹50</span>
+        </div>
+        <p>Thick rice pancake topped with onions, tomatoes, chilies, served with sambar and chutney.</p>
+        <button class="btn-card fancy-btn add-btn" type="button">Add to Order</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="title1"><h3>Place Your Order</h3></div>
+  <form id="orderForm" novalidate>
+    <input class="inp_box" type="text" name="name" placeholder="Full Name *" required />
+    <input class="inp_box" type="email" name="email" placeholder="Email Address *" required />
+    <input class="inp_box" type="tel" name="phone" placeholder="Phone Number *" required />
+    <textarea class="inp_box text_area" name="details" placeholder="Order Details *" required rows="5"></textarea>
+    <button type="submit" class="btn2 fancy-btn">Submit Order</button>
+  </form>
+</section>
+
+<section id="about">
+  <div class="title1"><h3>About Us</h3></div>
+  <div class="about_row">
+    <div class="about_column">
+      <p>Established in 2025, ADJ believe great food brings people together and strive to create a warm, welcoming environment for every guest.</p>
+      <p>ADJ Restaurant is found by three of close friends Adithya,Dinesh,Jashwanth(ADJ).</p>
+      <button id="btn1" class="fancy-btn">Learn More</button>
+    </div>
+    <div class="about_column">
+      <img src="main.jpg" alt="Restaurant interior" />
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="footer-inner">
+    <span>&copy; 2025 ADJ Restaurant. All rights reserved.</span>
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="#" aria-label="Instagram"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+    </div>
+  </div>
+  <div class="footer-contact">
+    <p>Contact us: <a href="tel:+919876543210">+91 98765 43210</a> | <a href="mailto:info@adjrestaurant.com">info@adjrestaurant.com</a></p>
+    <p>55 Salem, Tamil Nadu, Inida</p>
+  </div>
+</footer>
+
+<!-- Thank You Overlay -->
+<div id="thankYouOverlay" class="thank-you-overlay hidden" role="alertdialog" aria-live="polite" aria-labelledby="thankYouHeading" aria-describedby="thankYouText">
+  <div class="thank-you-message">
+    <h2 id="thankYouHeading">Thank You for Your Order!</h2>
+    <p id="thankYouText">We received your order. Visit Again!</p>
+    <h3>@ADJ Restaurant</h3>
+    <button id="closeThankYouBtn" class="fancy-btn" type="button">Close</button>
+  </div>
+</div>
+
+<!-- Back to Top Button -->
+<button id="backToTop" title="Back to Top" aria-label="Back to top">&#8679;</button>
+
+<!-- JavaScript for interactivity -->
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navbar = document.getElementById('navbar');
+  hamburger.onclick = () => navbar.classList.toggle('active');
+
+  // Smooth scroll
+  document.querySelectorAll('a.smooth-scroll').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetID = link.getAttribute('href').substring(1);
+      document.getElementById(targetID)?.scrollIntoView({ behavior: 'smooth' });
+      if (navbar.classList.contains('active')) navbar.classList.remove('active');
+    });
+  });
+
+  // Animate menu cards on scroll
+  const cards = document.querySelectorAll('.animated-card');
+  const animateCards = () => {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) card.classList.add('visible');
+    });
+  };
+  window.addEventListener('scroll', animateCards);
+  window.addEventListener('DOMContentLoaded', animateCards);
+
+  // Handle order form submission
+  const form = document.getElementById('orderForm');
+  const thankYouOverlay = document.getElementById('thankYouOverlay');
+  const closeThankYouBtn = document.getElementById('closeThankYouBtn');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    thankYouOverlay.classList.remove('hidden');
+    form.reset();
+  });
+
+  closeThankYouBtn.addEventListener('click', () => {
+    thankYouOverlay.classList.add('hidden');
+  });
+
+  // Back to top button
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) backToTopBtn.classList.add('show');
+    else backToTopBtn.classList.remove('show');
+  });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Add-to-Order button behavior
+  document.querySelectorAll('.add-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      this.textContent = 'Added';
+      this.classList.add('added');
+      this.disabled = true;
+    });
+  });
+</script>
+
+</body>
+</html>
