@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to My Restaurant</title>
+  <style>
+    /* Fullscreen centered welcome page */
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Baloo Bhai 2', cursive, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg,#ffc451 0%,#cb202d 100%);
+      color: white;
+      text-align: center;
+    }
+    .welcome-container {
+      max-width: 400px;
+      padding: 2rem;
+      background: rgba(0,0,0,0.3);
+      border-radius: 20px;
+      box-shadow: 0 0 40px #fff3b5;
+      animation: glow 2.5s ease-in-out infinite alternate;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 15px #fff7a7, 0 0 45px #fff7a7;
+    }
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 16px #fff7a7;
+    }
+    a.btn-continue {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: #cb202d;
+      font-weight: 700;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      box-shadow: 0 6px 20px #ffc451bb;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    a.btn-continue:hover,
+    a.btn-continue:focus {
+      background: #cb202d;
+      color: white;
+      box-shadow: 0 8px 32px #fff7a7bb;
+      transform: scale(1.06);
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 40px #fff3b5; }
+      100% { box-shadow: 0 0 70px #ffd35b; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-container">
+    <h1>Welcome!</h1>
+    <p>ADJ Restaurant</p>
+    <p>Thank you for visiting our Restaurant</p>
+    <p>Start Your Orders!</p>
+    <a href="index.html" class="btn-continue" aria-label="Enter Main Site">Enter Site</a>
+  </div>
+
+</body>
+</html>
